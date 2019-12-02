@@ -4,7 +4,7 @@ Installation
 
 First, install dependencies:
 
-    composer require james.xue/login-captcha-username
+    composer require archerzdip/login-captcha-username
  
 Second :
     

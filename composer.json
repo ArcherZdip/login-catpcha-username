@@ -1,14 +1,14 @@
 {
-    "name": "james.xue/login-captcha-username",
+    "name": "archerzdip/login-captcha-username",
     "description": "登录添加验证码和判断用户是否可用 ",
     "type": "library",
     "keywords": ["laravel-admin", "extension"],
-    "homepage": "https://github.com/xiaoxuan6/login-catpcha-username.git",
+    "homepage": "https://github.com/ArcherZdip/login-catpcha-username.git",
     "license": "MIT",
     "authors": [
         {
-            "name": "james.xue",
-            "email": "1527736751@qq.com"
+            "name": "archerzdip",
+            "email": "646121218@qq.com"
         }
     ],
     "require": {
