@@ -33,7 +33,7 @@ class CaptchaUserController extends Controller
             return Redirect::back()->withInput()->withErrors($validator);
         }
 
-        if (Auth::guard('admin')->attempt($credentials)) {
+        if ($this->guard()->attempt($credentials)) {
             admin_toastr(trans('admin.login_successful'));
 
             return redirect()->intended(config('admin.route.prefix'));
@@ -50,5 +50,15 @@ class CaptchaUserController extends Controller
         return Lang::has('auth.failed')
             ? trans('auth.failed')
             : 'These credentials do not match our records.';
+    }
+
+    /**
+     * @return \Illuminate\Contracts\Auth\Guard|\Illuminate\Contracts\Auth\StatefulGuard
+     */
+    protected function guard()
+    {
+        $guard = config('admin.auth.guard') ?: 'admin';
+
+        return Auth::guard($guard);
     }
 }
